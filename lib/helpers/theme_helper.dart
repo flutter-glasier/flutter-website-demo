@@ -140,6 +140,14 @@ class BaseTheme {
     );
   }
 
+  TextStyle get text14SemiBoldWhite {
+    return TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+        letterSpacing: 0.8,
+        color: Colors.white);
+  }
+
   TextStyle get text14SemiGrey {
     return TextStyle(
         fontSize: 14,
@@ -178,6 +186,14 @@ class BaseTheme {
       fontWeight: FontWeight.bold,
       letterSpacing: 0.8,
     );
+  }
+
+  TextStyle get text30SemiBoldWhite {
+    return TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.w900,
+        letterSpacing: 0.8,
+        color: Colors.white);
   }
 
   TextStyle get text35BoldBlack {
