@@ -4,13 +4,18 @@ import 'package:flutter_web_dashboard/helpers/theme_helper.dart';
 import 'package:flutter_web_dashboard/pages/home/widgets/carousel_slider.dart';
 import 'package:flutter_web_dashboard/pages/home/widgets/get_in.dart';
 
+import '../../../widgets/custom_widget.dart';
+
 class LandingWidgets extends StatelessWidget {
   const LandingWidgets({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30),
+      alignment: Alignment.center,
+      margin: EdgeInsets.symmetric(
+        horizontal: MediaQuery.of(context).size.width / 7,
+      ),
       height: ResponsiveWidget.isLargeScreen(context) ? 760 : double.infinity,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -19,7 +24,7 @@ class LandingWidgets extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
@@ -36,7 +41,8 @@ class LandingWidgets extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                GetInTouch()
+                CustomWidgets()
+                    .getButton(() {}, 'GET IN TOUCH', buttonWidth: 200)
               ],
             ),
           ),

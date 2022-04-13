@@ -32,21 +32,23 @@ class HowItWorks extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               seviceCard(
-                'assets/icons/search.png',
-                'Find What You Need',
-                'Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet',
-                Color(0xFF3498DB).withOpacity(0.2),
-              ),
+                  'assets/icons/search.png',
+                  'Find What You Need',
+                  'Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet',
+                  Color(0xFF3498DB).withOpacity(0.2),
+                  context),
               seviceCard(
                   'assets/icons/settings.png',
                   'Workout the details',
                   'Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet',
-                  Colors.red.withOpacity(0.2)),
+                  Colors.red.withOpacity(0.2),
+                  context),
               seviceCard(
                   'assets/icons/rocket.png',
                   'We get to work fast',
                   'Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet',
-                  Colors.yellow.withOpacity(0.2))
+                  Colors.yellow.withOpacity(0.2),
+                  context)
             ],
           ),
         ],
@@ -54,13 +56,14 @@ class HowItWorks extends StatelessWidget {
     );
   }
 
-  Widget seviceCard(
-          String imagePath, String label, String description, Color color) =>
+  Widget seviceCard(String imagePath, String label, String description,
+          Color color, BuildContext context) =>
       Container(
+        alignment: Alignment.center,
         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-        padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-        height: 220,
-        width: 270,
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        height: MediaQuery.of(context).size.height / 4,
+        width: MediaQuery.of(context).size.width / 5,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: appTheme!.grey.withOpacity(0.1)),
@@ -72,6 +75,8 @@ class HowItWorks extends StatelessWidget {
                   blurRadius: 12)
             ]),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
               radius: 30,
@@ -83,7 +88,7 @@ class HowItWorks extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: MediaQuery.of(context).size.height / 30,
             ),
             Text(
               label,
@@ -91,7 +96,7 @@ class HowItWorks extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: 10,
+              height: MediaQuery.of(context).size.height / 35,
             ),
             Text(
               description,

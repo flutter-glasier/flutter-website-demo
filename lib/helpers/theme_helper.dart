@@ -108,11 +108,11 @@ class BaseTheme {
 
   TextStyle get text12SemiBoldBlack {
     return TextStyle(
-        fontSize: 12,
-        fontWeight: FontWeight.w500,
-        letterSpacing: 0.8,
-        color: Colors.black,
-        overflow: TextOverflow.ellipsis);
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0.8,
+      color: Colors.black,
+    );
   }
 
   TextStyle get text12SemiBoldPrimary {
@@ -135,7 +135,7 @@ class BaseTheme {
   TextStyle get text14SemiBolddBlack {
     return TextStyle(
       fontSize: 14,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       letterSpacing: 0.8,
     );
   }
@@ -194,6 +194,14 @@ class BaseTheme {
         fontWeight: FontWeight.w900,
         letterSpacing: 0.8,
         color: Colors.white);
+  }
+
+  TextStyle get text30BoldGrey {
+    return TextStyle(
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+        letterSpacing: 0.8,
+        color: Colors.grey);
   }
 
   TextStyle get text35BoldBlack {
