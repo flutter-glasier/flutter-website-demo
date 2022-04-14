@@ -140,6 +140,14 @@ class BaseTheme {
     );
   }
 
+  TextStyle get text14RegularGrey {
+    return TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        letterSpacing: 0.9,
+        color: Colors.grey);
+  }
+
   TextStyle get text14SemiBoldWhite {
     return TextStyle(
         fontSize: 14,

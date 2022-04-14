@@ -5,6 +5,7 @@ import 'package:flutter_web_dashboard/pages/home/widgets/consult_problem.dart';
 import 'package:flutter_web_dashboard/pages/home/widgets/footer.dart';
 import 'package:flutter_web_dashboard/pages/home/widgets/how_it_works.dart';
 import 'package:flutter_web_dashboard/pages/home/widgets/landing_widget.dart';
+import 'package:flutter_web_dashboard/pages/home/widgets/testimonials.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -27,6 +28,9 @@ class HomeScreen extends StatelessWidget {
 
               HowItWorks(),
               ConsultYourBusiness(),
+              Testimonial(),
+              // TestimonialsHeader(),
+              // TestimonialsLayoutGrid(),
               Divider(),
               Footer()
               // LandingWidgets(),

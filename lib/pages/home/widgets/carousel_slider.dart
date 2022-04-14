@@ -2,8 +2,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../helpers/theme_helper.dart';
-
 List<String> imgList = [
   'assets/animation/web-designer-1.json',
   'assets/animation/web-designer-2.json',
