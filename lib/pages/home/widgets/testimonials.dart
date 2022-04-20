@@ -65,6 +65,7 @@ class _TestimonialState extends State<Testimonial> {
             horizontal: MediaQuery.of(context).size.width / 4, vertical: 50),
         child: StaggeredGridView.countBuilder(
             shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
             crossAxisCount: 3,
             padding: EdgeInsets.symmetric(vertical: 20),
             crossAxisSpacing: 10,
@@ -85,20 +86,23 @@ class _TestimonialState extends State<Testimonial> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(testiMonialData.values.toList()[index][0],
                           style: appTheme!.text14RegularGrey),
-                      Container(
-                        margin: EdgeInsets.symmetric(vertical: 10),
-                        height: 25,
-                        width: MediaQuery.of(context).size.width / 15,
-                        child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            physics: NeverScrollableScrollPhysics(),
-                            shrinkWrap: true,
-                            itemCount: 5,
-                            itemBuilder: (context, index) =>
-                                SvgPicture.asset('assets/icons/icon-star.svg')),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.symmetric(vertical: 10),
+                          height: 25,
+                          width: MediaQuery.of(context).size.width / 15,
+                          child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              physics: NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              itemCount: 5,
+                              itemBuilder: (context, index) => SvgPicture.asset(
+                                  'assets/icons/icon-star.svg')),
+                        ),
                       ),
                       ListTile(
                         contentPadding: EdgeInsets.zero,

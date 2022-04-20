@@ -7,6 +7,9 @@ import 'package:flutter_web_dashboard/controllers/menu_controller.dart';
 import 'package:flutter_web_dashboard/controllers/navigation_controller.dart';
 import 'package:flutter_web_dashboard/controllers/service_controller.dart';
 import 'package:flutter_web_dashboard/pages/EditProfile/edit_profile.dart';
+import 'package:flutter_web_dashboard/pages/authentication/forget-password.dart';
+import 'package:flutter_web_dashboard/pages/authentication/verify.dart';
+import 'package:flutter_web_dashboard/pages/services/services.dart';
 import 'package:flutter_web_dashboard/pages/utility/success_screen.dart';
 import 'package:flutter_web_dashboard/utils/navigator.dart';
 import 'package:flutter_web_dashboard/widgets/layout.dart';
@@ -50,9 +53,14 @@ class MyApp extends StatelessWidget {
             }),
         GetPage(
             name: authenticationPageRoute, page: () => AuthenticationPage()),
+        GetPage(name: verify, page: () => VerifyOTPScreen()),
         GetPage(
           name: editProfileRoute,
           page: () => EditProfile(),
+        ),
+        GetPage(
+          name: forgetPassword,
+          page: () => ForgetPassword(),
         ),
         GetPage(
           name: successScreen,
@@ -85,7 +93,7 @@ class MyApp extends StatelessWidget {
         }),
         primarySwatch: Colors.blue,
       ),
-      // home: AuthenticationPage(),
+      // home: Services(),
       // builder: _builder,
     );
   }

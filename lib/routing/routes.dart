@@ -16,6 +16,11 @@ const authenticationPageRoute = "/auth";
 
 const chatPageDisplayName = "Chat";
 const chatPageRoute = "/chat";
+const serviceRoute = "/service-route";
+const contactus = "/contact-us";
+
+const verify = '/verify-otp';
+const forgetPassword = '/forget-password';
 
 const viewEnquiryDetails = "/enquiries/:view-enquiry";
 const successScreen = "/success-screen";

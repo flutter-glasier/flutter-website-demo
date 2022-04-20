@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_web_dashboard/pages/EditProfile/edit_profile.dart';
 import 'package:flutter_web_dashboard/pages/authentication/authentication.dart';
+import 'package:flutter_web_dashboard/pages/authentication/verify.dart';
 import 'package:flutter_web_dashboard/pages/chat/chat.dart';
 import 'package:flutter_web_dashboard/pages/clients/clients.dart';
+import 'package:flutter_web_dashboard/pages/contactus/contactus.dart';
 import 'package:flutter_web_dashboard/pages/enquiry/enquiry.dart';
 import 'package:flutter_web_dashboard/pages/enquiry/widgets/enquiry_table.dart';
 import 'package:flutter_web_dashboard/pages/home/home.dart';
@@ -13,6 +15,7 @@ import 'package:flutter_web_dashboard/pages/overview/overview.dart';
 import 'package:flutter_web_dashboard/routing/routes.dart';
 import 'package:flutter_web_dashboard/utils/fade_route.dart';
 
+import '../pages/services/services.dart';
 import '../pages/view-enquiry/enquiry.dart';
 
 class NavigationUtilities {
@@ -84,6 +87,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(EditProfile());
     case chatPageRoute:
       return _getPageRoute(ChatScreen());
+    case serviceRoute:
+      return _getPageRoute(ServicesScreen());
+    case contactus:
+      return _getPageRoute(ContactUs());
+    // case verify:
+    //   return _getPageRoute(VerifyOTPScreen());
     default:
       return _getPageRoute(HomeScreen());
   }

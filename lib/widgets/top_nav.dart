@@ -42,10 +42,18 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                   weight: FontWeight.bold,
                 )),
             Expanded(child: Container()),
-            menuItem('Services', false),
-            menuItem('Contact us', false),
-            CustomWidgets()
-                .getButton(() {}, 'Sign-in', buttonHeight: 40, buttonWidth: 80)
+            menuItem('Services', false, () {
+              Get.toNamed(serviceRoute);
+              navigationController.navigateTo(serviceRoute);
+            }),
+            menuItem('Contact us', false, () {
+              Get.toNamed(contactus);
+              navigationController.navigateTo(contactus);
+            }),
+            CustomWidgets().getButton(() {
+              Get.toNamed(authenticationPageRoute);
+              navigationController.navigateTo(authenticationPageRoute);
+            }, 'Sign-in/up', buttonHeight: 40, buttonWidth: 80)
           ],
         ),
       ),
@@ -54,10 +62,14 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
       backgroundColor: appTheme!.whiteColor,
     );
 
-Widget menuItem(String label, bool isActive) => Padding(
+Widget menuItem(String label, bool isActive, VoidCallback callback) => Padding(
       padding: EdgeInsets.symmetric(horizontal: 15),
-      child: Text(
-        label,
-        style: isActive ? appTheme!.text16SemiGrey : appTheme!.text16SemiBlack,
+      child: InkWell(
+        onTap: callback,
+        child: Text(
+          label,
+          style:
+              isActive ? appTheme!.text16SemiGrey : appTheme!.text16SemiBlack,
+        ),
       ),
     );
