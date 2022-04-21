@@ -25,6 +25,8 @@ const forgetPassword = '/forget-password';
 const viewEnquiryDetails = "/enquiries/:view-enquiry";
 const successScreen = "/success-screen";
 
+const resetPassword = '/reset-password';
+
 class MenuItem {
   final String name;
   final String route;

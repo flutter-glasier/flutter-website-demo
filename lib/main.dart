@@ -8,8 +8,9 @@ import 'package:flutter_web_dashboard/controllers/navigation_controller.dart';
 import 'package:flutter_web_dashboard/controllers/service_controller.dart';
 import 'package:flutter_web_dashboard/pages/EditProfile/edit_profile.dart';
 import 'package:flutter_web_dashboard/pages/authentication/forget-password.dart';
+import 'package:flutter_web_dashboard/pages/authentication/reset-password.dart';
 import 'package:flutter_web_dashboard/pages/authentication/verify.dart';
-import 'package:flutter_web_dashboard/pages/services/services.dart';
+
 import 'package:flutter_web_dashboard/pages/utility/success_screen.dart';
 import 'package:flutter_web_dashboard/utils/navigator.dart';
 import 'package:flutter_web_dashboard/widgets/layout.dart';
@@ -66,10 +67,10 @@ class MyApp extends StatelessWidget {
           name: successScreen,
           page: () => SuccessScreen(),
         ),
-        // GetPage(
-        //   name: viewEnquiryDetails,
-        //   page: () => Enquiry(),
-        // ),
+        GetPage(
+          name: resetPassword,
+          page: () => ResetPassword(),
+        ),
       ],
       scrollBehavior: MaterialScrollBehavior().copyWith(
         dragDevices: {
