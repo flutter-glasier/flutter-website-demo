@@ -3,18 +3,19 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "3316fec3fdd7d80dba7ac1b2ae312f7a",
-"index.html": "b5e6bf4b68dcb261860b4c40a7b2b767",
-"/": "b5e6bf4b68dcb261860b4c40a7b2b767",
+  "main.dart.js": "76038cb52ac23ca4edbe437ed0d5aec3",
+"index.html": "4cca57ee1d4cbbc11a4e84c81ef07782",
+"/": "4cca57ee1d4cbbc11a4e84c81ef07782",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
-"assets/AssetManifest.json": "343c8dfc6360dff02e6ba8c7d2ad8165",
+"assets/AssetManifest.json": "282965809aaedc1f9dd5c0cc4fc70ba3",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/assets/animation/success.json": "1348d1c7d82c401e01d728e0fd3feefb",
 "assets/assets/animation/web-designer-3.json": "a5f8b3e8e4265f1b809482af70cc041a",
 "assets/assets/animation/web-designer-2.json": "f97f707dd31b2c0170d8ea0a4fa6a3af",
 "assets/assets/animation/web-designer-1.json": "aa075b60034d6ce455bd2f6c2df076cc",
+"assets/assets/animation/forget-password.json": "ea2718112536a740218a81baafe857ae",
 "assets/assets/animation/consulting.json": "657dd75fd86905d3dec0f303518e74ed",
 "assets/assets/animation/signup.json": "c214f210998a30753846705af474d64f",
 "assets/assets/animation/contactus.json": "111ecf08c6250d9eed16c35da3c11b1b",
